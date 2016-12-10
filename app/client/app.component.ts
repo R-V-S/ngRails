@@ -6,7 +6,5 @@ import { Component } from '@angular/core';
   styles: [require('./app.component.scss')]
 })
 export class AppComponent  {
-  constructor() {
-    this.name = 'world!'
-  }
+    name = 'world!';
 }

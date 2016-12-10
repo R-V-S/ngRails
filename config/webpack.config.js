@@ -14,7 +14,7 @@ var production = process.env.NODE_ENV === 'production';
 var config = {
   entry: {
     // Sources are expected to live in $app_root/webpack
-    'application': './app/client/main.js'
+    'application': './app/client/main.ts'
   },
 
   output: {
@@ -29,7 +29,8 @@ var config = {
   },
 
   resolve: {
-    root: path.join(__dirname, '..', 'app/client')
+    root: path.join(__dirname, '..', 'app/client'),
+    extensions: ['', '.js', '.ts', '.scss', '.css']
   },
 
   plugins: [
@@ -45,17 +46,6 @@ var config = {
 
   module: {
     loaders: [
-      // Run js files through Babel
-      {
-        test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['latest'],
-          plugins: ['transform-decorators-legacy'],
-          cacheDirectory: true
-        }
-      },
       // Run html files through a raw loader so that they can be inserted
       // inline in components
       {
@@ -73,6 +63,12 @@ var config = {
       {
         test: /^(?!.*component\.(s)?css$).*\.(s)?css$/i,
         loaders: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      // Run ts files through TypeScript
+      {
+        test: /\.ts$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'ts-loader'
       }
     ]
   }
