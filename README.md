@@ -23,7 +23,7 @@ An easy starter project for a Rails 5 / Angular 2 build. This is the JavaScript 
 If you choose to clone, you can run this command to clone this repo into a new project folder (e.g. `my-proj`):
 
 ```sh
-git clone https://github.com/R-V-S/ngRails-JS.git my-proj
+git clone https://github.com/R-V-S/ngRails.git my-proj
 cd my-proj
 ```
 
