@@ -1,6 +1,6 @@
 # ngRails (TypeScript)
 
-An easy starter project for a Rails 5 / Angular 2 build. This is the JavaScript version. There is also a [JavaScript version](https://github.com/R-V-S/ngRails-JS). Features:
+An easy starter project for a Rails 5 / Angular 2 build. This is the TypeScript version. There is also a [JavaScript version](https://github.com/R-V-S/ngRails-JS). Features:
 
 * [webpack](https://webpack.github.io/) serves assets.
 * [TypeScript](https://www.typescriptlang.org/) enables ES6/7 JavaScript language features and a robust typing system.
